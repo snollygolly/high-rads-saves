@@ -2,6 +2,11 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import { step } from './stores.js';
+	let currentStep;
+	step.subscribe(value => {
+		currentStep = value;
+	});
 </script>
 
 <header>
@@ -22,10 +27,14 @@
 			<li aria-current={$page.url.pathname === '/import' ? 'page' : undefined}>
 				<a href="/import">Import</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/modify' ? 'page' : undefined}>
+			<li 
+				class:disabled="{currentStep < 1}"
+				aria-current={$page.url.pathname === '/modify' ? 'page' : undefined}>
 				<a href="/modify">Modify</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/export' ? 'page' : undefined}>
+			<li 
+				class:disabled="{currentStep < 2}"
+				aria-current={$page.url.pathname === '/export' ? 'page' : undefined}>
 				<a href="/export">Export</a>
 			</li>
 		</ul>
@@ -50,6 +59,11 @@
 	.corner {
 		width: 3em;
 		height: 3em;
+	}
+
+	.disabled {
+		pointer-events:none;
+    	opacity:0.6;   
 	}
 
 	.corner a {
@@ -128,5 +142,9 @@
 
 	a:hover {
 		color: var(--color-theme-1);
+	}
+
+	[aria-current]:not([aria-current="false"]) {
+		text-decoration: underline;
 	}
 </style>

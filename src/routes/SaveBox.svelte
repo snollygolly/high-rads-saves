@@ -79,7 +79,7 @@
 	import Fab, { Label, Icon } from '@smui/fab';
 	import Dialog, { Title, Content as DContent, Actions, InitialFocus } from '@smui/dialog';
   	import Button, { Label as BLabel } from '@smui/button';
-	import { saves } from './stores.js';
+	import { saves, step } from './stores.js';
 	let saveInis;
 	saves.subscribe(value => {
 		saveInis = value;
@@ -101,6 +101,8 @@
 			open = true;
 		}
 		saves.set(saveInis);
+		// setting step 1 to indicate we've passed import
+		step.set(1);
 		console.log(saveInis);
 		console.log("clicked submitSaves");
 	}
