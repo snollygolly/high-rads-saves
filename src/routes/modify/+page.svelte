@@ -26,6 +26,16 @@
 					<Cell>{value}</Cell>
 				</Row>
 				{/each}
+				{#each Object.entries(mergedSave.save.stats) as [prop, value]}
+				<Row>
+					<Cell>{prop}</Cell>
+					<Cell>{value}</Cell>
+				</Row>
+				{/each}
+				<Row>
+					<Cell>inv_value</Cell>
+					<Cell>{mergedSave.save.inv_value.now}</Cell>
+				</Row>
 			</Body>
 		  </DataTable>
 		  {/if}
