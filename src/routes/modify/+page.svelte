@@ -41,9 +41,15 @@
 			</Body>
 		  </DataTable>
 		  <hr>
-		  <canvas height="400" width="400"></canvas>
+		  {/if}
+		  <canvas
+			bind:this={canvas}
+			width={400}
+			height={300}
+		></canvas>
+		  {#if mergedSave.save}
 		  <hr>
-		  <DataTable table$aria-label="Inventory" style="width: 100%;" bind:this={testbind}>
+		  <DataTable table$aria-label="Inventory" style="width: 100%;">
 			<Head>
 			  <Row>
 				<Cell>ID</Cell>
@@ -71,20 +77,20 @@
 	import { onMount } from 'svelte';
 
 	export let data;
-	let testbind;
+	let canvas;
 	let mergedSave = {};
 
 	onMount(() => {
-		const canvas = document.querySelector("canvas");
 		console.log("test canvas", canvas)
-		console.log("table here?", testbind)
 		if (browser) {
 			mergedSave = JSON.parse(localStorage.getItem("jsSave"));
 			//draw the inventory image
 			//if (canvas.getContext) {
 				const ctx = canvas.getContext("2d");
+				ctx.fillStyle = "white";
 				for (const item of mergedSave.save.Inventory) {
-					ctx.fillRect(item.x, item.y, 20, 20);
+					console.log(`drawing rect at ${item.x}, ${item.y}`);
+					ctx.fillRect(item.x, item.y, 16, 16);
 				}
 			//}
 		}	
@@ -93,3 +99,13 @@
 	});
 	
 </script>
+
+<style>
+	canvas {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+</style>
