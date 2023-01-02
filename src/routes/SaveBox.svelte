@@ -4,25 +4,25 @@
       <List>
         <Item
           href="javascript:void(0)"
-          on:click={() => (save = 'save_#.ini')}
+          on:click={() => {changeSaveBox(0);}}
         >
           <Text>save_#.ini</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          on:click={() => (save = 'save_general_#.ini')}
+          on:click={() => {changeSaveBox(1);}}
         >
           <Text>save_general_#.ini</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-		  disabled=true
+		  disabled='{true}'
         >
           <Text>save_hub_#.ini (coming soon)</Text>
         </Item>
         <Item
           href="javascript:void(0)"
-          disabled=true
+          disabled='{true}'
         >
           <Text>save_player_chest_#.ini (coming soon)</Text>
         </Item>
@@ -34,22 +34,72 @@
     <main class="main-content">
       Zero Sievert Save File Importer
       <br />
-      <pre class="status">Paste Save File: {save}</pre>
+      <pre class="status">Paste Save File: {eMap[save]}</pre>
 	  <div class="margins">
-		<Textfield textarea bind:value label="Paste .ini contents here">
+		<Textfield textarea bind:value={saveInis[save]} label="Paste .ini contents here" required >
 		</Textfield>
 	  </div>
     </main>
   </AppContent>
+
+
 </div>
+
+<br>
+<div class="margins">
+<Fab color="primary" on:click={submitSaves} extended>
+	<Icon class="material-icons">settings</Icon>
+	<Label>Process</Label>
+</Fab>
+</div>
+
+<Dialog
+  bind:open
+  aria-labelledby="default-focus-title"
+  aria-describedby="default-focus-content"
+>
+  <Title id="default-focus-title">Warning</Title>
+  <DContent id="default-focus-content">
+    You must provide all required .ini files for processing to work
+  </DContent>
+  <Actions>
+    <Button
+      defaultAction
+      use={[InitialFocus]}
+    >
+      <BLabel>OK</BLabel>
+    </Button>
+  </Actions>
+</Dialog>
 
 <script lang="ts">
 	import Textfield from '@smui/textfield';
 	import Drawer, { AppContent, Content } from '@smui/drawer';
   	import List, { Item, Text } from '@smui/list';
+	import Fab, { Label, Icon } from '@smui/fab';
+	import Dialog, { Title, Content as DContent, Actions, InitialFocus } from '@smui/dialog';
+  	import Button, { Label as BLabel } from '@smui/button';
+	const eMap = ["save_#.ini", "save_general_#.ini"];
   
-	let save = '';
-	let value = '';
+	let open = false;
+	let save = 0;
+	const saveInis = [
+		"", "", "", ""
+	];
+
+	function changeSaveBox(e) {
+		save = e;
+		console.log("hit change save box");
+		console.log(e, eMap[e]);
+	}
+
+	function submitSaves (e) {
+		if (!saveInis[0].length || !saveInis[1].length) {
+			open = true;
+		}
+		console.log(saveInis);
+		console.log("clicked submitSaves");
+	}
 </script>
 
 <style>

@@ -1,39 +1,27 @@
-<script>
-	import SaveBox from './SaveBox.svelte';
-	import Fab, { Label, Icon } from '@smui/fab';
-
-	function submitSaves (e) {
-		console.log("clicked submitSaves", e);
-	}
-</script>
-
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="About this app" />
 </svelte:head>
 
-<section>
-	<h1>
-		Copy and paste your save files for Zero Sievert into these boxes and we'll work to help you tweak them to your liking
-	</h1>
+<div class="paper-container">
+	<Paper color="secondary">
+		<Title>How to use</Title>
+		<Subtitle>Select <b>"Import"</b> on the top navigation to get started. </Subtitle>
+		<Content>You'll need access to your save files to be able to use this utility. I'd highly encourage you to make a backup incase you mess something up. This tool is even more early access than the game and will almost definitely mess up your game.</Content>
+	  </Paper>
 
-	<SaveBox />
-	<br>
-	<div class="margins">
-		<Fab color="primary" on:click={submitSaves} extended>
-		  <Icon class="material-icons">settings</Icon>
-		  <Label>Process</Label>
-		</Fab>
-	  </div>
-</section>
+	<Paper variant="unelevated">
+	  <Title>About this app</Title>
+	  <Subtitle>This app is meant to import, modify, and export saves for the game <a href="https://store.steampowered.com/app/1782120/ZERO_Sievert/">Zero Sievert</a>.</Subtitle>
+	  <Content>It's a great game, but after losing significant progress due to a crash <i>(it is early access after all)</i>, I decided to make something to fix it. We'll see how far I get.</Content>
+	</Paper>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+	<Paper variant="outlined">
+	  <Title>How to find your save files</Title>
+	  <Content>Enter the path in the folder address bar: C:/Users/%USERPROFILE%/AppData/Local/Zero_Sievert</Content>
+	</Paper>
+  </div>
 
-</style>
+<script lang="ts">
+	import Paper, { Title, Subtitle, Content } from '@smui/paper';
+</script>
