@@ -79,13 +79,16 @@
 	import Fab, { Label, Icon } from '@smui/fab';
 	import Dialog, { Title, Content as DContent, Actions, InitialFocus } from '@smui/dialog';
   	import Button, { Label as BLabel } from '@smui/button';
+	import { saves } from './stores.js';
+	let saveInis;
+	saves.subscribe(value => {
+		saveInis = value;
+	});
 	const eMap = ["save_#.ini", "save_general_#.ini"];
   
 	let open = false;
 	let save = 0;
-	const saveInis = [
-		"", "", "", ""
-	];
+	
 
 	function changeSaveBox(e) {
 		save = e;
@@ -97,6 +100,7 @@
 		if (!saveInis[0].length || !saveInis[1].length) {
 			open = true;
 		}
+		saves.set(saveInis);
 		console.log(saveInis);
 		console.log("clicked submitSaves");
 	}
