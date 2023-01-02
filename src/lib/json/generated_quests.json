@@ -1,0 +1,434 @@
+{
+  "1": {
+    "name": "Kill Lazar",
+    "reward": "6500",
+    "exp": "50",
+    "text": "Kill Lazar"
+  },
+  "2": {
+    "name": "First steps p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Kill 5 bandits in the forest"
+  },
+  "3": {
+    "name": "First steps p.2",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Survive the forest 2 times"
+  },
+  "4": {
+    "name": "Valuable item",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Retrieve the valuable item"
+  },
+  "5": {
+    "name": "Smoking kills p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Find 10 red cigarette"
+  },
+  "6": {
+    "name": "Smoking kills p.2",
+    "reward": "rew_money[4]",
+    "exp": "rew_exp[4]",
+    "text": "Find 5 blue cigarette"
+  },
+  "7": {
+    "name": "The lost convoy",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Find 5 blue cigarette"
+  },
+  "8": {
+    "name": "Vendetta",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Survive the forest 2 times"
+  },
+  "9": {
+    "name": "Survivalist: Forest p.1",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[2]",
+    "text": "Survive the forest 2 times"
+  },
+  "10": {
+    "name": "Survivalist: Forest p.2",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[4]",
+    "text": "Survive the forest 2 times"
+  },
+  "11": {
+    "name": "Supply p.1",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[1]",
+    "text": "Find 10 bread"
+  },
+  "12": {
+    "name": "Supply p.2",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[2]",
+    "text": "Find 3 generic chocolate"
+  },
+  "13": {
+    "name": "Chocolate for everyone",
+    "reward": "rew_money[4]",
+    "exp": "rew_exp[2]",
+    "text": "Find 3 generic chocolate"
+  },
+  "14": {
+    "name": "What's on the flash drive?",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find 8 forks"
+  },
+  "15": {
+    "name": "No more barks",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[1]",
+    "text": "Kill 15 wolfs"
+  },
+  "16": {
+    "name": "New arrivals",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[1]",
+    "text": "Find 2 cooking pot"
+  },
+  "17": {
+    "name": "Cutlery",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find 8 forks"
+  },
+  "18": {
+    "name": "What's cooking?",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[2]",
+    "text": "Find 2 cooking pot"
+  },
+  "19": {
+    "name": "The lost backpack",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[1]",
+    "text": "Find 2 cooking pot"
+  },
+  "20": {
+    "name": "Survivalist: Makeshift camp p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Survive the forest 2 times"
+  },
+  "21": {
+    "name": "Survivalist: Makeshift camp p.2",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Survive the forest 2 times"
+  },
+  "24": {
+    "name": "Makeshift camp",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Kill 5 bandits in the forest"
+  },
+  "25": {
+    "name": "The missing group p.1",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[1]",
+    "text": "Find the missing group"
+  },
+  "26": {
+    "name": "The missing group p.2",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[4]",
+    "text": "Kill the monster"
+  },
+  "27": {
+    "name": "Stylish one",
+    "reward": "10000",
+    "exp": "250",
+    "text": "Survive the forest 2 times"
+  },
+  "28": {
+    "name": "Secret documents",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Retrieve documents located in the village"
+  },
+  "29": {
+    "name": "The old man",
+    "reward": "15000",
+    "exp": "rew_exp[4]",
+    "text": "Kill Igor"
+  },
+  "30": {
+    "name": "Sawmill p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Approach the sawmill"
+  },
+  "31": {
+    "name": "Sawmill p.2",
+    "reward": "3500",
+    "exp": "110",
+    "text": "Find the USB drive in the sawmill"
+  },
+  "32": {
+    "name": "Equipment p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Find 250 scrap ammo"
+  },
+  "33": {
+    "name": "Equipment p.2",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Find 250 scrap ammo"
+  },
+  "34": {
+    "name": "Ghoul destroyer p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Kill 40 Ghouls"
+  },
+  "35": {
+    "name": "Ghoul destroyer p.2",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[4]",
+    "text": "Kill 40 Ghouls"
+  },
+  "36": {
+    "name": "The Lair",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find the Ghoul's lair in the forest"
+  },
+  "37": {
+    "name": "Destroy the Ghoul's lair",
+    "reward": "rew_money[3]",
+    "exp": "110",
+    "text": "Destroy the ghoul's lair"
+  },
+  "38": {
+    "name": "Cleaning p.1",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[4]",
+    "text": "Kill 15 bandits in the forest"
+  },
+  "39": {
+    "name": "Cleaning p.2",
+    "reward": "6500",
+    "exp": "150",
+    "text": "Kill Lazar"
+  },
+  "40": {
+    "name": "More bandits",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Kill 15 bandits in the makeshift camp"
+  },
+  "41": {
+    "name": "Mark a working truck",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[0]",
+    "text": "Find and mark a working truck"
+  },
+  "42": {
+    "name": "Always in the way",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[4]",
+    "text": "Kill 15 bandits in the forest"
+  },
+  "43": {
+    "name": "Motel p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find the motel"
+  },
+  "44": {
+    "name": "Motel p.2",
+    "reward": "3500",
+    "exp": "200",
+    "text": "Motel infestation"
+  },
+  "45": {
+    "name": "Weird phenomena p.1",
+    "reward": "3000",
+    "exp": "50",
+    "text": "Retrieve the flight recorder"
+  },
+  "46": {
+    "name": "Preparing for battle",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Find 250 scrap ammo"
+  },
+  "47": {
+    "name": "Clear the Swamp",
+    "reward": "6000",
+    "exp": "220",
+    "text": "Clear the swamp"
+  },
+  "50": {
+    "name": "Radioactive meat",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find 10 raw meat"
+  },
+  "51": {
+    "name": "Strange crystal p.1",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[0]",
+    "text": "Find 3 fire crystal"
+  },
+  "52": {
+    "name": "Strange crystal p.2",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[3]",
+    "text": "Find 3 chemical crystal"
+  },
+  "53": {
+    "name": "no data",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[1]",
+    "text": "Retrieve the analyzer"
+  },
+  "54": {
+    "name": "Movies",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Find 8 Ghoul tentacles"
+  },
+  "55": {
+    "name": "Pelts p.1",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Find 5 rabbit pelts"
+  },
+  "56": {
+    "name": "Pelts p.2",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[2]",
+    "text": "Find 10 wolf pelts"
+  },
+  "57": {
+    "name": "Body parts p.1",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[2]",
+    "text": "Find 5 boar fang"
+  },
+  "58": {
+    "name": "Body parts p.2",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[4]",
+    "text": "Find 8 Ghoul tentacles"
+  },
+  "59": {
+    "name": "The radio tower",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[2]",
+    "text": "Locate the radio tower"
+  },
+  "60": {
+    "name": "Necessary components",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[3]",
+    "text": "Find 8 wires"
+  },
+  "61": {
+    "name": "Upgrade",
+    "reward": "rew_money[4]",
+    "exp": "rew_exp[4]",
+    "text": "Find 8 wires"
+  },
+  "62": {
+    "name": "Fix the radio tower",
+    "reward": "3000",
+    "exp": "50",
+    "text": "Fix the radio tower"
+  },
+  "63": {
+    "name": "Medikit",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[2]",
+    "text": "Find 15 scrap med"
+  },
+  "64": {
+    "name": "Tons of meds!",
+    "reward": "rew_money[3]",
+    "exp": "rew_exp[4]",
+    "text": "Find 50 scrap med"
+  },
+  "65": {
+    "name": "Radiation effect",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[4]",
+    "text": "Reach orange lvl of radiation"
+  },
+  "66": {
+    "name": "Laboratory p.1",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[3]",
+    "text": "Find the laboratory key"
+  },
+  "67": {
+    "name": "Laboratory p.2",
+    "reward": "rew_money[4]",
+    "exp": "rew_exp[3]",
+    "text": "Find 3 CPUs"
+  },
+  "68": {
+    "name": "Laboratory p.3",
+    "reward": "10000",
+    "exp": "300",
+    "text": "Explore the laboratory"
+  },
+  "69": {
+    "name": "Eyes everywhere",
+    "reward": "7500",
+    "exp": "100",
+    "text": "Place the CCTV camera"
+  },
+  "70": {
+    "name": "Cleanup",
+    "reward": "10000",
+    "exp": "125",
+    "text": "Kill 15 Green Army soldiers"
+  },
+  "71": {
+    "name": "Meat for Igor",
+    "reward": "2500",
+    "exp": "40",
+    "text": "Collect 10 raw meat"
+  },
+  "72": {
+    "name": "Materials",
+    "reward": "rew_money[0]",
+    "exp": "rew_exp[0]",
+    "text": "Collect 40 scrap material"
+  },
+  "89": {
+    "name": "Documents p.1",
+    "reward": "rew_money[1]",
+    "exp": "rew_exp[2]",
+    "text": "Find the missing Hunter"
+  },
+  "90": {
+    "name": "Documents p.2",
+    "reward": "rew_money[2]",
+    "exp": "rew_exp[3]",
+    "text": "Retrieve the documents"
+  },
+  "94": {
+    "name": "Inspect the village",
+    "reward": "6000",
+    "exp": "220",
+    "text": "Inspect the swamp village"
+  },
+  "172": {
+    "name": "Grigory's ring",
+    "reward": "0",
+    "exp": "120",
+    "text": "Retrieve Grigoriy's ring"
+  }
+}

@@ -79,7 +79,8 @@
 	import Fab, { Label, Icon } from '@smui/fab';
 	import Dialog, { Title, Content as DContent, Actions, InitialFocus } from '@smui/dialog';
   	import Button, { Label as BLabel } from '@smui/button';
-	import { saves, step } from './stores.js';
+	import { step, saves } from './stores.js';
+	import parser from '../lib/parser.js';
 	let saveInis;
 	saves.subscribe(value => {
 		saveInis = value;
@@ -101,9 +102,11 @@
 			open = true;
 		}
 		saves.set(saveInis);
-		// setting step 1 to indicate we've passed import
+		// let's try to parse it and persist that
+		const tmpJsSave = parser(saveInis);
+		localStorage.setItem("jsSave", JSON.stringify(tmpJsSave));
 		step.set(1);
-		console.log(saveInis);
+		window.location.href = "/modify";
 		console.log("clicked submitSaves");
 	}
 </script>

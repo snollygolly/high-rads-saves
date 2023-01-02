@@ -1,10 +1,11 @@
 <script>
 	import SaveBox from '../SaveBox.svelte';
+	import { redirect } from '@sveltejs/kit';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Import Saves</title>
+	<meta name="description" content="Import your .ini save files for modification" />
 </svelte:head>
 
 <section>
@@ -15,6 +16,7 @@
 	<p>Select the label on the left that describes the save file you will be pasting. The game supports several save slots, so if you used slot 1 and you want to start by uploading <i>save_#.ini</i>, you would copy the contents of your <i>save_1.ini</i> file and paste it in the box.</p>
 
 	<SaveBox />
+	
 </section>
 
 <style>
@@ -25,5 +27,4 @@
 		align-items: center;
 		flex: 0.6;
 	}
-
 </style>

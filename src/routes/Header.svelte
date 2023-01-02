@@ -33,7 +33,7 @@
 				<a href="/modify">Modify</a>
 			</li>
 			<li 
-				class:disabled="{currentStep < 2}"
+				class:disabled="{currentStep < 1}"
 				aria-current={$page.url.pathname === '/export' ? 'page' : undefined}>
 				<a href="/export">Export</a>
 			</li>
