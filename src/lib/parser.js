@@ -57,7 +57,7 @@ const fileFuncs = {
 		for (const line of lines) {
 			if (line.indexOf("[") === 0) {
 				// a label line, start a group?
-				const cleanLine = line.substring(1, line.length - 2)
+				const cleanLine = line.substring(1, line.length - 1)
 				result[cleanLine] = {};
 				currentGroup = cleanLine;
 				console.log(`Changing current group to ${currentGroup}`);
