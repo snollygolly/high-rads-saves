@@ -32,9 +32,9 @@
  
   <AppContent class="app-content">
     <main class="main-content">
-      Zero Sievert Save File Importer
+      Save File Importer
       <br />
-      <pre class="status">Paste Save File: {eMap[save]}</pre>
+      <p class="status">Paste Save File: {eMap[save]}</p>
 	  <div class="margins">
 		<Textfield textarea bind:value={saveInis[save]} label="Paste .ini contents here" required >
 		</Textfield>

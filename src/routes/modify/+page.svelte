@@ -14,7 +14,9 @@
 
 	<div>
 		{#if mergedSave.save}
-		<DataTable table$aria-label="Basic Bio Stats" style="width: 100%;">
+		<hr>
+		<h3>Basic Player Information</h3>
+		<DataTable table$aria-label="Basic Player Information" style="width: 100%;">
 			<Head>
 			  <Row>
 				<Cell>Property</Cell>
@@ -42,18 +44,21 @@
 		  </DataTable>
 		  <hr>
 		  {/if}
+		  <h3>Player Inventory Graphic</h3>
 		  <canvas
 			bind:this={canvas}
-			width={400}
-			height={300}
+			width={600}
+			height={450}
 		></canvas>
 		  {#if mergedSave.save}
 		  <hr>
+		  <h3>Player Inventory Table</h3>
 		  <DataTable table$aria-label="Inventory" style="width: 100%;">
 			<Head>
 			  <Row>
 				<Cell>ID</Cell>
 				<Cell numeric>Qty</Cell>
+				<Cell>Image</Cell>
 				<Cell>Name</Cell>
 			  </Row>
 			</Head>
@@ -62,6 +67,7 @@
 				<Row>
 					<Cell>{item.id}</Cell>
 					<Cell numeric>{item.qty}</Cell>
+					<Cell><img src="https://raw.githubusercontent.com/Zakov-Tools/zakov-tools.github.io/main/static/img/{padNumber(data.items[item.id].legacy - 1)}.png" alt="item"/></Cell>
 					<Cell>{data.items[item.id].name}</Cell>
 				</Row>
 				{/each}
@@ -87,16 +93,29 @@
 			//draw the inventory image
 			//if (canvas.getContext) {
 				const ctx = canvas.getContext("2d");
-				ctx.fillStyle = "white";
+				ctx.scale(1.5, 1.5);
 				for (const item of mergedSave.save.Inventory) {
-					console.log(`drawing rect at ${item.x}, ${item.y}`);
-					ctx.fillRect(item.x, item.y, 16, 16);
+					//ctx.fillRect(item.x, item.y, 16, 16);
+					const img = new Image();
+					img.src = `https://raw.githubusercontent.com/Zakov-Tools/zakov-tools.github.io/main/static/img/${padNumber(data.items[item.id].legacy - 1)}.png`;
+					img.onload = () => {
+						ctx.drawImage(img, item.x, item.y, img.width / 5.375, img.height / 5.375);
+						console.log(`drawing ${padNumber(data.items[item.id].legacy - 1)}.png at ${item.x}, ${item.y} (${img.width / 5.375}, ${img.height / 5.375})`);
+					}
 				}
 			//}
 		}	
 		console.log("modify page load, merged save:")
 		console.log(mergedSave)
 	});
+
+	function padNumber(number) {
+		number = number.toString();
+		while(number.length < 4) {
+			number = "0" + number;
+		}
+		return number;
+	}
 	
 </script>
 
