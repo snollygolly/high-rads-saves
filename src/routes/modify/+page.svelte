@@ -82,6 +82,7 @@
 			  <Row>
 				<Cell>ID</Cell>
 				<Cell>Name</Cell>
+				<Cell>Giver</Cell>
 				<Cell>Status</Cell>
 			  </Row>
 			</Head>
@@ -91,9 +92,23 @@
 				<Row>
 					<Cell>{index}</Cell>
 					<Cell>{#if data.quests[index]}{data.quests[index].name}{/if}</Cell>
+					<Cell>???</Cell>
 					<Cell>Completed</Cell>
 				</Row>
 				{/if}
+				{/each}
+
+				{#each questNpcs as npc}
+					{#if mergedSave.save_general[npc]}
+					{#each mergedSave.save_general[npc].quests as quest}
+					<Row>
+						<Cell>{quest.quest}</Cell>
+						<Cell>{#if data.quests[quest.quest]}{data.quests[quest.quest].name}{/if}</Cell>
+						<Cell>{npc}</Cell>
+						<Cell>Not Completed</Cell>
+					</Row>
+					{/each}
+					{/if}
 				{/each}
 			</Body>
 		  </DataTable>
@@ -109,6 +124,23 @@
 	export let data;
 	let inventoryCanvas;
 	let mergedSave = {};
+
+	let questNpcs = [
+		"Barman_quest",
+		"The Doctor_quest",
+		"Conductor_quest",
+		"Igor Kuzmin_quest",
+		"General Artemovich_quest",
+		"Mr. Junk_quest"
+	];
+	let traderNpcs = [
+		"Barman_trader",
+		"The Doctor_trader",
+		"Joel Emerson_trader",
+		"Reynard Shepard_trader",
+		"Alexei Andreevich_trader",
+		"Mr. Junk_trader"
+	];
 
 	onMount(() => {
 		if (browser) {
