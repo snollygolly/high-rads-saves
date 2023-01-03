@@ -81,6 +81,7 @@
   	import Button, { Label as BLabel } from '@smui/button';
 	import { step, saves } from './stores.js';
 	import parser from '../lib/parser.js';
+	import { goto } from '$app/navigation';
 	let saveInis;
 	saves.subscribe(value => {
 		saveInis = value;
@@ -106,7 +107,7 @@
 		const tmpJsSave = parser(saveInis);
 		localStorage.setItem("jsSave", JSON.stringify(tmpJsSave));
 		step.set(1);
-		window.location.href = "/modify";
+		goto(`/modify`, { replaceState: true }) 
 		console.log("clicked submitSaves");
 	}
 </script>
