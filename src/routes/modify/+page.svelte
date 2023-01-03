@@ -48,6 +48,7 @@
 			</Body>
 		  </DataTable>
 		  <hr>
+		  <h3>Player Statistics</h3>
 		  <DataTable table$aria-label="Player Statistics" style="width: 100%;">
 			<Head>
 			  <Row>

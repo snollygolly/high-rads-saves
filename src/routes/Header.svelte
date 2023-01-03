@@ -3,6 +3,7 @@
 	import logo from '$lib/images/Radioactive.svg';
 	import github from '$lib/images/github.svg';
 	import { step } from './stores.js';
+	import { base } from '$app/paths';
 	let currentStep;
 	step.subscribe(value => {
 		currentStep = value;
@@ -33,7 +34,7 @@
 				<a href="/modify">Modify</a>
 			</li>
 			<li 
-				class:disabled="{currentStep < 1}"
+				class:disabled="{currentStep < 2}"
 				aria-current={$page.url.pathname === '/export' ? 'page' : undefined}>
 				<a href="/export">Export</a>
 			</li>
