@@ -1,38 +1,28 @@
-# create-svelte
+# :collision: high-rads-saves
+ A repo to tinker with Zero Sievert save files
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Interested?
+Try it now without dealing with code. [High Rads Saves Utility](https://snollygolly.github.io/high-rads-saves/)
 
-## Creating a project
+## Prerequisites
+* [Node.js](https://nodejs.org/en/) (Version 16 and up recommended)
+* Patience. This repo is a hacky janky mess and it may or may not get better. You've been warned.
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+* Clone down the repository.
+```
+git clone https://github.com/snollygolly/high-rads-saves.git
 ```
 
-## Developing
+* Install dependencies
+```
+npm install
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+* Run the dev server
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+* Enjoy!
