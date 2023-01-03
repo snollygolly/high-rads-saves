@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	import logo from '$lib/images/Radioactive.svg';
 	import github from '$lib/images/github.svg';
 	import { step } from './stores.js';
 	let currentStep;
@@ -11,7 +11,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a href="/">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
@@ -44,7 +44,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/snollygolly/high-rads-saves">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>

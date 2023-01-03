@@ -6,7 +6,7 @@
 <div class="text-column">
 	<h1>Save Modification</h1>
 
-	<h3>This page is read-only for now, export does not work</h3>
+	<h3 style="text-decoration: underline;">This page is read-only for now, export does not work</h3>
 
 	<p>
 		Here you will see an overview on the stats and items we are able to modify for your save files. Support for additional features coming soon. When you have finished modifying your save files how you want, click on "Export" in the menu to go to the next step. 
@@ -46,7 +46,7 @@
 		  {/if}
 		  <h3>Player Inventory Graphic</h3>
 		  <canvas
-			bind:this={canvas}
+			bind:this={inventoryCanvas}
 			width={600}
 			height={450}
 		></canvas>
@@ -74,6 +74,30 @@
 			</Body>
 		  </DataTable>
 		  {/if}
+		  {#if mergedSave.save}
+		  <hr>
+		  <h3>Quest Information</h3>
+		  <DataTable table$aria-label="Quests" style="width: 100%;">
+			<Head>
+			  <Row>
+				<Cell>ID</Cell>
+				<Cell>Name</Cell>
+				<Cell>Status</Cell>
+			  </Row>
+			</Head>
+			<Body>
+				{#each mergedSave.save_general.FinishedQuests as item, index}
+				{#if item}
+				<Row>
+					<Cell>{index}</Cell>
+					<Cell>{#if data.quests[index]}{data.quests[index].name}{/if}</Cell>
+					<Cell>Completed</Cell>
+				</Row>
+				{/if}
+				{/each}
+			</Body>
+		  </DataTable>
+		  {/if}
 	</div>
 </div>
 
@@ -83,16 +107,15 @@
 	import { onMount } from 'svelte';
 
 	export let data;
-	let canvas;
+	let inventoryCanvas;
 	let mergedSave = {};
 
 	onMount(() => {
-		console.log("test canvas", canvas)
 		if (browser) {
 			mergedSave = JSON.parse(localStorage.getItem("jsSave"));
 			//draw the inventory image
 			//if (canvas.getContext) {
-				const ctx = canvas.getContext("2d");
+				const ctx = inventoryCanvas.getContext("2d");
 				ctx.scale(1.5, 1.5);
 				for (const item of mergedSave.save.Inventory) {
 					//ctx.fillRect(item.x, item.y, 16, 16);
@@ -105,8 +128,8 @@
 				}
 			//}
 		}	
-		console.log("modify page load, merged save:")
-		console.log(mergedSave)
+		console.log("quest name test")
+		console.log(data.quests[2].name)
 	});
 
 	function padNumber(number) {
