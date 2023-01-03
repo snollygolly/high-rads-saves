@@ -16,6 +16,7 @@
 		{#if mergedSave.save}
 		<hr>
 		<h3>Basic Player Information</h3>
+		<h4>In Game: {timeInGame}</h4>
 		<DataTable table$aria-label="Basic Player Information" style="width: 100%;">
 			<Head>
 			  <Row>
@@ -40,6 +41,27 @@
 					<Cell>inv_value</Cell>
 					<Cell>{mergedSave.save.inv_value.now}</Cell>
 				</Row>
+				<Row>
+					<Cell>real_time_played</Cell>
+					<Cell>{mergedSave.save_general["Real time played"].seconds} seconds</Cell>
+				</Row>
+			</Body>
+		  </DataTable>
+		  <hr>
+		  <DataTable table$aria-label="Player Statistics" style="width: 100%;">
+			<Head>
+			  <Row>
+				<Cell>Property</Cell>
+				<Cell>Value</Cell>
+			  </Row>
+			</Head>
+			<Body>
+				{#each Object.entries(mergedSave.save_general.Statistics.data) as [prop, value]}
+				<Row>
+					<Cell>{value.name}</Cell>
+					<Cell>{value.value}</Cell>
+				</Row>
+				{/each}
 			</Body>
 		  </DataTable>
 		  <hr>
@@ -142,9 +164,13 @@
 		"Mr. Junk_trader"
 	];
 
+	let timeInGame;
+
 	onMount(() => {
 		if (browser) {
 			mergedSave = JSON.parse(localStorage.getItem("jsSave"));
+			// US centric date/time format, so sue me
+			timeInGame = `day ${parseInt(mergedSave.save_general.Time.Day_now)} at ${parseInt(mergedSave.save_general.Time.Hour)}:${parseInt(mergedSave.save_general.Time.Minutes)}:00 on ${parseInt(mergedSave.save_general.Time.Month)}/${parseInt(mergedSave.save_general.Time.Day)}/${parseInt(mergedSave.save_general.Time.Year)}`
 			//draw the inventory image
 			//if (canvas.getContext) {
 				const ctx = inventoryCanvas.getContext("2d");
